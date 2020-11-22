@@ -8,3 +8,19 @@
   font-family: "vazir";
   src: url("../fonts/Vazir.woff");
 }
+/* Nav tag Background-color */
+main > nav {
+  background-color: #e8e8e8;
+  border-radius: 1rem;
+}
+/* select tag custom attributes */
+.optionCar {
+  color: #393e46;
+  font-style: italic;
+  font-weight: bold;
+}
+/* hr  */
+hr {
+  width: 100%;
+  color: #e8e8e8 !important;
+}
