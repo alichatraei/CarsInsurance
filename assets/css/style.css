@@ -10,9 +10,12 @@
 }
 /* Nav tag Background-color */
 main > nav {
+  height: auto;
   background-color: #e8e8e8;
   border-radius: 1rem;
 }
+/* Main */
+
 /* select tag custom attributes */
 .optionCar {
   color: #393e46;
@@ -23,4 +26,9 @@ main > nav {
 hr {
   width: 100%;
   color: #e8e8e8 !important;
+}
+/* Table */
+div > table {
+  background-color: #f4f4f2;
+  border-radius: 1rem;
 }
