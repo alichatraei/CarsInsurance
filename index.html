@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>محاسبه آنلاین قیمت بیمه خودرو</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  </head>
+  <body class="bg-light">
+    <main class="container-fluid mt-5 justify-content-center">
+      <nav class="row text-right mx-2">
+        <from class="form">
+          <div class="col-sm-4 col-md">
+            <label for="selectCar">خودرو خود را انتخاب کنید</label>
+            <select name="selectCar" id="selectCar" class="form-control">
+              <option disabled selected>خودرو خود را انتخاب کنید</option>
+              <option
+                disabled
+                style="color:midnightblue; bold; font-size: 0.9rem; margin-right: 3rem"
+              >
+                خودرو داخلی
+              </option>
+              <!-- Inside Cars ==> I1,.... -->
+              <option value="I1">پراید</option>
+              <option value="I2">سمند</option>
+              <option value="I3">پژو 206</option>
+              <option value="I4">رانا</option>
+              <option value="I5">تیبا</option>
+              <option value="I6">دنا (پلاس،توربو اتوماتیک)</option>
+              <option value="I7">شاهین</option>
+              <option
+                disabled
+                style="font-weight: bold; font-size: 0.9rem; margin-right: 3rem"
+              >
+                خودرو خارجی
+              </option>
+              <!-- Outside Cars ==> O1,... -->
+              <option value="O1">لندکروز</option>
+              <option value="O2">سانتافه</option>
+              <option value="O3">بی ام و X4</option>
+              <option value="O4">شاهین</option>
+            </select>
+          </div>
+        </from>
+      </nav>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/j-query.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Classes.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

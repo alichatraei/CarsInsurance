@@ -1,0 +1,10 @@
+* {
+  font-family: "vazir";
+  direction: rtl;
+}
+/* Font */
+
+@font-face {
+  font-family: "vazir";
+  src: url("../fonts/Vazir.woff");
+}
