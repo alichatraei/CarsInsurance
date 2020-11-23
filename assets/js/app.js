@@ -1,10 +1,11 @@
 //variables
-const htmlShow = new HTMLShow();
-let selectBuiltNumber = document.querySelector("#selectCarsYear"),
+let insurance = new Insurance(),
+  htmlShow = new HTMLShow(),
+  selectBuiltNumber = document.querySelector("#selectCarsYear"),
   selectCar = document.querySelector("#selectCar"),
-  form = document.querySelector(".form"),
+  form = document.querySelector("#form"),
   btnCalculate = document.querySelector("#calculate"),
-  btnReset = document.querySelector("#resetForm"),
+  btnReset = document.querySelector("#formReset"),
   formRadio = document.querySelectorAll('input[type="radio"]');
 // console.log(htmlShow.getCar(""));
 
@@ -17,22 +18,29 @@ function eventListeners() {
     btnCalculate.disabled = true;
     //show years in built selection box
     htmlShow.showYears(selectBuiltNumber);
-    // send default 2020 to the calculateYear
-    htmlShow.calculateYear(2020);
   });
   // change select builtYear option tag value event listeners
   selectBuiltNumber.addEventListener("change", (option) => {
-    htmlShow.calculateYear(option.target.value);
+    year = option.target.value;
   });
   // change select car option tag value
   selectCar.addEventListener("change", (option) => {
-    htmlShow.calculateCar(option.target.value);
+    car = option.target.value;
   });
   //checked Insurance radio button and get value with eventListeners
   formRadio.forEach((insurance) => {
-    insurance.addEventListener("change", () => {
-      htmlShow.calculateInsurance(insurance.value);
+    insurance.addEventListener("change", (option) => {
+      insurance = option.target.value;
     });
+  });
+
+  //active button if everything fill out
+  selectCar.addEventListener("blur", () => {
+    btnCalculate.disabled = false;
+  });
+  //calculate
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
   });
   //reset form
   btnReset.addEventListener("click", () => {

@@ -1,8 +1,6 @@
 // Calculate Insurance Class
 class Insurance {
-  constructor(car, year, insurance) {
-    (this.car = car), (this.year = year), (this.insurance = insurance);
-  }
+  constructor() {}
   calculateCar(car) {
     this.carPrice = 50000;
     if (car.includes("I")) {
