@@ -7,7 +7,6 @@ let insurance = new Insurance(),
   btnCalculate = document.querySelector("#calculate"),
   btnReset = document.querySelector("#formReset"),
   formRadio = document.querySelectorAll('input[type="radio"]');
-// console.log(htmlShow.getCar(""));
 
 //eventListeners
 eventListeners();
@@ -21,16 +20,16 @@ function eventListeners() {
   });
   // change select builtYear option tag value event listeners
   selectBuiltNumber.addEventListener("change", (option) => {
-    year = option.target.value;
+    insurance.calculateYear(option.target.value);
   });
   // change select car option tag value
   selectCar.addEventListener("change", (option) => {
-    car = option.target.value;
+    insurance.calculateCar(option.target.value);
   });
   //checked Insurance radio button and get value with eventListeners
-  formRadio.forEach((insurance) => {
-    insurance.addEventListener("change", (option) => {
-      insurance = option.target.value;
+  formRadio.forEach((kind) => {
+    kind.addEventListener("change", (option) => {
+      insurance.calculateInsurance(option.target.value);
     });
   });
 

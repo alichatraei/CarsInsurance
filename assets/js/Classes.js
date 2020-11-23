@@ -1,39 +1,40 @@
 // Calculate Insurance Class
 class Insurance {
-  constructor() {}
+  constructor() {
+    (this.base = 50000000),
+      (this.carPrice = 0),
+      (this.carYear = 0),
+      (this.insurance = 0);
+  }
   calculateCar(car) {
-    this.carPrice = 50000;
+    let base = this.base;
     if (car.includes("I")) {
-      this.carPrice = this.carPrice + (this.carPrice * 30) / 100;
+      this.carPrice = base + (base * 30) / 100;
     } else {
-      this.carPrice = this.carPrice + (this.carPrice * 50) / 100;
+      this.carPrice = base + (base * 50) / 100;
     }
     return this.carPrice;
   }
   calculateYear(year) {
-    let price = 1000;
-    let nowYear = new Date().getFullYear();
-    if (nowYear - year == 0) {
-      return (this.carPrice = 1000);
-    } else {
-      // now (year) minus carBuildYear
-      let difference = nowYear - year;
-      let priceOfYear = this.carPrice - (price * 3) / 100;
-      //price of year multiply by difference and put it to this.price
-      this.carPrice = priceOfYear * difference;
-      return console.log(this.carPrice);
-    }
+    let base = this.carPrice;
+    let nowYear = new Date().getFullYear() + 1;
+    // now (year) minus carBuildYear
+    let difference = nowYear - year;
+    let priceOfYear = base * 0.15;
+    //price of year multiply by difference and put it to this.price
+    this.carYear = priceOfYear / difference;
+    this.carYear += this.carPrice;
+    return parseInt(this.carYear);
   }
   calculateInsurance(option) {
-    let price;
+    this.insurance = this.carYear;
     if (option === "basicInsurance") {
-      price = 1;
-      price = this.carPrice + (this.carPrice * 10) / 100;
+      this.insurance += this.insurance * 0.3;
+      return this.insurance;
     } else {
-      price = 1;
-      price = this.carPrice + (this.carPrice * 30) / 100;
+      this.insurance += this.insurance * 0.4;
+      return this.insurance;
     }
-    console.log(price);
   }
 }
 
