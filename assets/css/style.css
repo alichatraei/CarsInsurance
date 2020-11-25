@@ -32,3 +32,6 @@ div > table {
   background-color: #f4f4f2;
   border-radius: 1rem;
 }
+.checkoutForm {
+  display: none !important;
+}
